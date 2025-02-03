@@ -38,7 +38,8 @@ export default function Home() {
 
         .content {
           position: relative;
-          width: 30%;
+          max-width: 500px;
+          width: 100%;
           height: 30%;
           text-align: center;
         }

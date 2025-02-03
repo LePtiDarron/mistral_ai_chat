@@ -90,6 +90,7 @@ const MessageInput = ({ onNewMessageSent }) => {
   return (
     <div className="main-content">
       <div className="input-wrapper">
+        <img src="/mistral.png" alt="Logo" className="logo" />
         <Select 
           options={[
             { value: 'codestral-2405', label: 'codestral-2405' },
@@ -120,7 +121,16 @@ const MessageInput = ({ onNewMessageSent }) => {
       </div>
 
       <style jsx>{`
+        .logo {
+          width: 50%;
+          object-fit: contain;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 30px;
+        }
+
         .main-content {
+          text-align: center;
           flex: 1;
           display: flex;
           flex-direction: column;
@@ -134,12 +144,13 @@ const MessageInput = ({ onNewMessageSent }) => {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          width: 40%;
+          width: 100%;
+          max-width: 600px;
         }
 
         .input-container {
           margin-top: 10px;
-          min-width: 400px;
+          width: 100%;
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
           border-radius: 20px;
           display: flex;

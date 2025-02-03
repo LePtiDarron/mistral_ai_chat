@@ -100,8 +100,8 @@ const Signup = () => {
         }
 
         .content {
-          min-width: 500px;
-          width: 30%;
+          width: 100%;
+          max-width: 500px;
           text-align: center;
           padding: 20px;
           background-color: white;

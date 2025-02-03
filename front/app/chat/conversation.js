@@ -152,15 +152,18 @@ const ConversationDetails = ({ selectedConversation, onNewMessageSent }) => {
           align-items: center;
           padding: 20px;
           height: 100vh;
+          width: 100%;
+          max-width: 800px;
+          margin: 0 auto;
         }
 
         .conversation-container {
           display: flex;
           justify-content: flex-end;
           align-items: flex-end;
-          width: 50%;
           flex-direction: column;
           height: 100%;
+          width: 100%;
         }
 
         .conversation-details {
@@ -170,7 +173,6 @@ const ConversationDetails = ({ selectedConversation, onNewMessageSent }) => {
           gap: 15px;
           max-height: calc(100vh - 220px);
           overflow-y: auto;
-          width: 100%;
           margin-bottom: 10px;
           flex-grow: 1;
         }
@@ -179,8 +181,8 @@ const ConversationDetails = ({ selectedConversation, onNewMessageSent }) => {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          width: 50%;
           margin-top: auto;
+          width: 100%;
         }
 
         .conversation-details::-webkit-scrollbar {
@@ -224,6 +226,7 @@ const ConversationDetails = ({ selectedConversation, onNewMessageSent }) => {
           font-size: 16px;
           line-height: 1.5;
           word-wrap: break-word;
+          white-space: pre-wrap;
         }
 
         .user-message {
