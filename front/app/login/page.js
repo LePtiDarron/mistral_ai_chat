@@ -46,7 +46,7 @@ const Login = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password" className="label">Mot de passe</label>
+            <label htmlFor="password" className="label">password</label>
             <input
               id="password"
               type="password"
@@ -57,8 +57,8 @@ const Login = () => {
             />
           </div>
           {error && <p className="error">{error}</p>}
-          <p>Pas encore inscrit ? <a href="/signup" className="link">S'inscrire</a></p>
-          <button type="submit" className="submit-btn">Se connecter</button>
+          <p>Not registered yet ? <a href="/signup" className="link">Signup</a></p>
+          <button type="submit" className="submit-btn">Login</button>
         </form>
       </div>
 

@@ -130,7 +130,7 @@ const ConversationDetails = ({ selectedConversation, onNewMessageSent }) => {
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
             disabled={loading}
-            placeholder="Ecrivez un message..."
+            placeholder="Write a message..."
             rows="3"
           />
           <button 

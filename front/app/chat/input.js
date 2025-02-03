@@ -107,7 +107,7 @@ const MessageInput = ({ onNewMessageSent }) => {
             value={userMessage}
             onChange={(e) => setUserMessage(e.target.value)}
             disabled={loading}
-            placeholder="Ecrivez un message..."
+            placeholder="write a message..."
             rows="3"
           />
           <button 

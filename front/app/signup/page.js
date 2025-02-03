@@ -53,7 +53,7 @@ const Signup = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="username" className="label">Nom d'utilisateur</label>
+            <label htmlFor="username" className="label">Username</label>
             <input
               id="username"
               type="text"
@@ -64,7 +64,7 @@ const Signup = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password" className="label">Mot de passe</label>
+            <label htmlFor="password" className="label">Password</label>
             <input
               id="password"
               type="password"
@@ -75,7 +75,7 @@ const Signup = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="confirm-password" className="label">Confirmer le mot de passe</label>
+            <label htmlFor="confirm-password" className="label">Confirm password</label>
             <input
               id="confirm-password"
               type="password"
@@ -86,8 +86,8 @@ const Signup = () => {
             />
           </div>
           {error && <p className="error">{error}</p>}
-          <p>Vous avez déjà un compte ? <a href="/login" className="link">Se connecter</a></p>
-          <button type="submit" className="submit-btn">S'inscrire</button>
+          <p>Already registered ? <a href="/login" className="link">Login</a></p>
+          <button type="submit" className="submit-btn">Signup</button>
         </form>
       </div>
 

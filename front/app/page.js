@@ -20,10 +20,10 @@ export default function Home() {
 
         <div className="buttons">
           <button className="login-btn" onClick={handleLoginClick}>
-            J'ai déjà un compte
+            I already have an account
           </button>
           <button className="signup-btn" onClick={handleSignupClick}>
-            Je m'inscris
+            I want to register
           </button>
         </div>
       </div>

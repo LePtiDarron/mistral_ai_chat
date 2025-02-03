@@ -43,7 +43,7 @@ const Chat = () => {
         setUsername(res.data);
       }
     } catch (error) {
-      console.error("Erreur lors de la récupération du profil:", error);
+      console.error("Error while fetching profile:", error);
     }
   };
   
@@ -59,7 +59,7 @@ const Chat = () => {
         setConversations(res.data);
       }
     } catch (error) {
-      console.error("Erreur lors de la récupération des conversations:", error);
+      console.error("Error while fetching conversations:", error);
     }
   };
 
@@ -96,7 +96,7 @@ const Chat = () => {
         setSelectedConversation(null);
       }
     } catch (error) {
-      console.error("Erreur lors du renommage de la conversation:", error);
+      console.error("Error renaming conversation:", error);
     }
   };
 
@@ -105,7 +105,7 @@ const Chat = () => {
       await fetchConversations();
       setSelectedConversation(currentConversation);
     } catch (error) {
-      console.error("Erreur lors de l'envoi du message:", error);
+      console.error("Error sending the message:", error);
     }
   };
 
@@ -114,7 +114,7 @@ const Chat = () => {
       await fetchConversations();
       setSelectedConversation(newConversation);
     } catch (error) {
-      console.error("Erreur lors de l'envoi du message:", error);
+      console.error("Error sending the message:", error);
     }
   };
   
@@ -129,7 +129,7 @@ const Chat = () => {
       setShowMenu(null);
       setSelectedConversation(null);
     } catch (error) {
-      console.error("Erreur lors de la suppression de la conversation:", error);
+      console.error("Error deleting the conversation:", error);
     }
   };
 
@@ -152,7 +152,7 @@ const Chat = () => {
       setToken(null);
       router.push('/');
     } catch (error) {
-      console.error("Erreur lors de la suppression du compte:", error);
+      console.error("Error while deleting the accout:", error);
     }
   };
 
@@ -186,22 +186,22 @@ const Chat = () => {
       <div className="sidebar">
         <div className="session-container">
           <button className="header-button" onClick={toggleSessionMenu}>
-            {username ? <h3>Session de {username}</h3> : <h3>Chargement...</h3>}
+            {username ? <h3>{username}'s session</h3> : <h3>Loading...</h3>}
           </button>
           {showSessionMenu && (
             <div className="session-menu">
               <button onClick={handleLogout}>
-                <FaSignOutAlt style={{ marginRight: '8px' }} /> Déconnecter
+                <FaSignOutAlt style={{ marginRight: '8px' }} /> Disconnect
               </button>
               <button onClick={handleDeleteAccount}>
-                <FaTrashAlt style={{ marginRight: '8px' }} /> Supprimer mon compte
+                <FaTrashAlt style={{ marginRight: '8px' }} /> Delete my account
               </button>
             </div>
           )}
         </div>
 
         <button className="header-button" onClick={handleNewMessageClick}>
-          <FaPen style={{ marginRight: '8px' }} /> Écrire un nouveau message
+          <FaPen style={{ marginRight: '8px' }} /> Write a new message
         </button>
 
         <div className="conversations-list">
@@ -247,10 +247,10 @@ const Chat = () => {
                   {showMenu === conversation.id && !renamingConversation && (
                     <div className="menu-edit">
                       <button onClick={() => handleRename(conversation)}>
-                        <FaPencilAlt style={{ marginRight: '8px' }} /> Renommer
+                        <FaPencilAlt style={{ marginRight: '8px' }} /> Rename
                       </button>
                       <button className="delete-button" onClick={handleDelete}>
-                        <FaTrashAlt style={{ marginRight: '8px' }} /> Supprimer
+                        <FaTrashAlt style={{ marginRight: '8px' }} /> Delete
                       </button>
                     </div>
                   )}
@@ -258,7 +258,7 @@ const Chat = () => {
               ))}
             </ul>
           ) : (
-            <p>Aucune conversation disponible.</p>
+            <p>No previous conversations.</p>
           )}
         </div>
       </div>
