@@ -95,7 +95,7 @@ Once your PostgreSQL database is set up, you can configure and run the backend m
     ```
 
 3. Stop the Backend
-    To stop the Backend server, press ```bash(Ctrl+C)``` in the terminal where the Backend is running.
+    To stop the Backend server, press ```Ctrl+C``` in the terminal where the Backend is running.
 
 ## Setting Up the Frontend
 
@@ -122,4 +122,4 @@ Once your PostgreSQL database and backend are set up, you can configure and run 
     Now visit the [http://localhost:3000](web-site) and enjoy !
 
 3. Stop the Frontend
-    To stop the frontend server, press ```bash(Ctrl+C)``` in the terminal where the Frontend is running.
+    To stop the frontend server, press ```Ctrl+C``` in the terminal where the Frontend is running.
